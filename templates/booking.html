@@ -1,0 +1,19 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+    Reservation Page
+{% endblock %}
+
+{% block body %}
+
+
+        <form action="{{ request.path }}" method="POST">
+            <input type="text" name="firstname" id="firstname" class="form-control" placeholder="First Name" required>
+            <input type="text" name="lastname" id="lastname" class="form-control" placeholder="Last Name" required>
+            <input type="text" name="email" id="email" class="form-control" placeholder="Email" required>
+            <input type="text" name="phone" id="phone" class="form-control" placeholder="Phone Number" required>
+            <input type="submit" class="btn-submit" value="Sent">
+        </form>
+
+
+{% endblock %}

@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/admin_style.css')}}">
+    <title>Admin Panel - Newsletter Subscribers</title>
+</head>
+<body>
+<a href="/index/">Main Page</a>
+<a href="/admin_panel/">Admin Panel</a>
+<table id="booking-list">
+
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
+        </tr>
+
+
+
+    {% for newsletters in Newsletter %}
+        <tr>
+            <td>{{ newsletters.firstname }}</td>
+            <td>{{ newsletters.lastname }}</td>
+            <td>{{ newsletters.email }}</td>
+        </tr>
+    {%  endfor %}
+
+</table>
+</body>
+</html>

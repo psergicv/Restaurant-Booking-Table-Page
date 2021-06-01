@@ -1,0 +1,23 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+Main Page
+{% endblock %}
+
+{% block body %}
+    <section class="about">
+        <div class="title-container">
+            <h1>WELCOME TO FLASK RESTAURANT</h1>
+        </div>
+    </section>
+
+    <div class="book_now_btn">
+        <a href="/booking" class="btn">Book A Table</a>
+    </div>
+
+    <section class="chef">
+        <img src="/static/assets/img/chef.jpg" alt="Chef" class="img1">
+        <img src="/static/assets/img/chef2.jpg" alt="Chef" class="img2">
+        <img src="/static/assets/img/chef3.jpg" alt="Chef" class="img3">
+    </section>
+{% endblock %}

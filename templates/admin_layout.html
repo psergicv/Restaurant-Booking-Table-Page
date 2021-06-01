@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/admin_style.css')}}">
+    <title>{% block title %} {% endblock %}</title>
+</head>
+<body>
+
+<div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="/admin_panel/admin_panel_bookings">Bookings</a>
+    <a href="/admin_panel/newsletter_subscribers">Subscribers</a>
+    <a href="/admin_panel/enquiries">Enquiries</a>
+{#    <a href="/admin_panel/messages">Messages</a>#}
+</div>
+
+<h2>Admin Panel</h2>
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
+
+<script>
+    function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+    }
+
+    function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <title>{% block title %} {% endblock %}</title>
+</head>
+<body>
+
+<section class="nav">
+
+        <ul class="navbar-bar">
+            <li class="navbar-link"><a href="/" class="nav-bar-link-link">Home</a></li>
+            <li class="navbar-link"><a href="/menu" class="nav-bar-link-link">Menu</a></li>
+            <li class="navbar-link"><a href="/booking" class="nav-bar-link-link">Reservation</a></li>
+            <li class="navbar-link"><a href="/find-us" class="nav-bar-link-link">Find Us</a></li>
+        </ul>
+
+</section>
+
+{% block body %} {% endblock %}
+
+<div class="footer">
+
+    <div class="copyright">
+        <p>© 2021 Restaurant Website Design By Postolachi Sergiu</p>
+    </div>
+
+    <div class="newsletter_btn">
+        <a href="/newsletter-signup" class="nl_btn">Sign Up for News & Offers</a>
+    </div>
+
+
+
+</div>
+
+</body>
+</html>
